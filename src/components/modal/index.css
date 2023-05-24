@@ -1,0 +1,81 @@
+.forget_pwd_modal .modal-content {
+  max-width: 471px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+
+.rename_team_modal .modal-dialog {
+  max-width: 705px;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.delete_team_modal .modal-dialog,
+.asset_name_modal .modal-dialog {
+  max-width: 705px;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.cancel_review_modal .modal-dialog{
+  max-width: 705px;
+  width: 100%;
+  height: 278px;
+}
+.upload_thumbnail_modal .modal-dialog {
+  max-width: 560px;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.invite_modal .modal-dialog {
+  max-width: 777px;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.create_new_team_modal .modal-dialog {
+  max-width: 560px;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.publish_modal .modal-dialog {
+  max-width: 1130px ;
+  width: 100%;
+  padding: 1rem;
+  height: auto;
+}
+
+.message_modal .modal-dialog {
+  max-width: 664px;
+  width: 100%;
+}
+
+.input_name {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #51566b;
+  padding-top: 50px;
+}
+
+.invite_dropdown,
+.invite_dropdown:active,
+.invite_dropdown:hover,
+.invite_dropdown:active,
+.invite_dropdown:focus {
+  border: 1px solid #dce1e7 !important;
+  border-left: 0 !important;
+  border-radius: 0 6px 6px 0;
+  padding: 13px 10px;
+  border-color: #dce1e7 !important;
+  height: 48px;
+}
+
+@media (max-width: 500px) {
+  .publish_modal .modal-dialog {
+    margin-left: -10px;
+  }
+}

@@ -1,0 +1,26 @@
+.filter_head {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5; 
+  }
+  
+  .edit_toggle,
+  .edit_dropdown .btn.show,
+  .edit_toggle:active,
+  .edit_toggle:hover,
+  .edit_toggle:active {
+    background-color: white !important;
+    color: black !important;
+    border: none;
+  }
+  
+  .filter_item:active {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+  }
+  
+  
+ 

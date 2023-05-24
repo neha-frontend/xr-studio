@@ -1,0 +1,50 @@
+.message_box {
+  display: flex;
+  justify-content: space-between;
+  margin: 28px auto;
+  cursor: pointer;
+
+  .new_msg {
+    margin-right: 5px;
+    display: flex;
+    transform: translateY(-15%);
+    max-width: 6px;
+    width: 100%;
+  }
+
+  .active_status {
+    position: absolute;
+    top: 29px;
+    border: 1px solid white;
+    border-radius: 60%;
+    height: 15px;
+    background: #00c247;
+    right: 0;
+    width: 15px;
+  }
+
+  .user_name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+    color: #000713;
+  }
+
+  .last_msg {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+    color: #616161;
+  }
+
+  .receive_time {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: -0.28px;
+    color: #757575;
+  }
+}

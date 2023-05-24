@@ -1,0 +1,52 @@
+.msg_header {
+  display: flex;
+  justify-content: space-between;
+
+  .msg_title {
+    font-weight: 700;
+    font-size: 24px;
+    font-feature-settings: 'salt' on;
+    color: #000713;
+  }
+
+  .search_img {
+    max-width: 18px;
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .search_input,
+  .search_input:focus-visible {
+    font-weight: 400;
+    font-size: 14px;
+    color: #9e9e9e;
+    border: none;
+    outline: none;
+    max-width: 100px;
+    width: 100%;
+  }
+
+  .header_text {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: -0.28px;
+    color: #1a96f0;
+  }
+
+  .msg_request {
+    padding: 7px;
+  }
+}
+
+.no_td {
+  text-decoration: none;
+}
+
+.delete_all {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  letter-spacing: -0.28px;
+  color: #ff3333;
+}

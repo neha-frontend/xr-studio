@@ -1,0 +1,113 @@
+.modal_body {
+  display: flex;
+  flex-direction: column;
+  max-width: 545px;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  margin: 0 auto;
+
+  .modal_title {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #000713;
+  }
+
+  .modal_desc {
+    text-align: center;
+    color: #616161;
+    padding-top: 12px;
+  }
+
+  .description {
+    margin: 20px auto;
+    font-size: clamp(12px, 1vw, 16px);
+  }
+  .description p,.description{
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+  }
+
+  .email_input {
+    position: relative;
+    position: relative;
+    max-width: 545px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 40px auto;
+
+    .input_name {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #51566b;
+    }
+    .input_box {
+      padding: 12px 12px 12px 16px;
+      height: 48px;
+      background: #ffffff;
+      border: 1px solid #dce1e7;
+      border-radius: 6px;
+      box-shadow: none;
+    }
+  }
+
+  .btn_container {
+    display: flex;
+    max-width: 545px;
+    margin: 50px auto;
+    justify-content: space-between;
+  }
+
+  .send_btn,
+  .send_btn:active {
+    padding: 12px 48px;
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    background: #ff3333;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    white-space: nowrap;
+  }
+
+  .cancel_btn,
+  .cancel_btn:active {
+    background: #FFFFFF;
+    color: #005CFF;
+    border: 1px solid #005CFF;
+  }
+  @media(max-width:768px){
+    .send_btn{
+      padding: 12px 12px;
+      height: 40px;
+    }
+  }
+}
+
+.close_modal {
+  text-align: end;
+  margin: 22px 22px 0 0;
+
+  .close_icon {
+    max-width: 30px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+}
+@media(max-width:768px){
+  .modal_body{
+    padding: 0 24px;
+  }
+}

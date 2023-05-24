@@ -1,0 +1,255 @@
+//OATMEAL FONT
+@font-face {
+  font-family: 'Oatmeal Pro';
+  src: url('./../assets/font/oatmeanPro/OatmealProTRIAL-Regular.otf') format('opentype');
+}
+
+.no_data {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: -0.28px;
+  font-feature-settings: 'salt' on;
+  color: #9e9e9e;
+  padding: 50px 0;
+}
+
+//LAYOUT SCSS
+.editor {
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.editor_container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.main_body {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #f5f5f5;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.02);
+  }
+}
+
+.user_layout_body {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+//SIDEBAR SCSS
+.side .MuiDrawer-paper {
+  position: relative;
+  overflow: hidden;
+  z-index: 1050;
+}
+
+.user_logo_img {
+  margin: 28px 42px;
+  max-width: 130px;
+  width: 100%;
+}
+.sidebar_profile {
+  display: none;
+  margin: 28px 16px;
+}
+.teamDetails_header {
+  display: none;
+  margin: 0 auto;
+}
+.teamDetails_header .title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000713;
+}
+
+.teamDetails_header .star {
+  max-width: 19px;
+  height: auto;
+  margin-left: 7px;
+  vertical-align: sub;
+}
+.sidebar_profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.sidebar_profile .name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.28px;
+  margin-bottom: 0;
+}
+.sidebar_profile a {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #005cff;
+}
+ul.MuiList-root.MuiList-padding {
+  margin-left: 24px;
+}
+
+.MuiListItem-button .MuiListItemIcon-root {
+  min-width: 39px;
+}
+
+.MuiListItemText-root .MuiTypography-body1 {
+  font-family: 'Oatmeal Pro';
+  font-weight: 400;
+  font-size: 14px;
+  font-feature-settings: 'salt' on;
+}
+
+.MuiList-root {
+  .MuiListItem-button {
+    height: 45px;
+    transition: none;
+    margin-top: 5px;
+    font-feature-settings: 'salt' on;
+    color: #424242;
+  }
+
+  .active_list {
+    width: 200px;
+    height: 45px;
+    background: #e5efff;
+    border-radius: 47px;
+    color: #005cff;
+    font-weight: 600;
+
+    img {
+      filter: invert(36%) sepia(82%) saturate(7494%) hue-rotate(216deg) brightness(102%)
+        contrast(105%);
+    }
+  }
+
+  .favourite {
+    font-weight: 400;
+    font-size: 14px;
+    color: #9e9e9e;
+    padding-top: 16px;
+    margin-top: 28px;
+    border-top: 1px solid #dce1e7;
+    width: 200px;
+  }
+
+  .MuiListItem-button:hover {
+    width: 200px;
+    height: 45px;
+    background: #e5efff;
+    border-radius: 47px;
+  }
+}
+
+//HEADER SCSS
+
+.user_header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dce1e7;
+  position: fixed;
+  width: calc(100% - 288px);
+  z-index: 999;
+  height: 70px;
+  background: white;
+  align-items: center;
+  top: 0;
+
+  .back_arrow {
+    max-width: 10px;
+    margin-right: 10px;
+    padding: 2px;
+    cursor: pointer;
+  }
+
+  .breadcrumb {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+    font-feature-settings: 'salt' on;
+    color: #212121;
+  }
+
+  .header_icon {
+    margin-right: 30px;
+  }
+
+  .profile_pic {
+    margin-right: 15px;
+  }
+}
+
+.child_body {
+  margin-top: 80px;
+  height: 100%;
+}
+
+@media (max-width: 960px) {
+  .child_body {
+    margin-top: 0;
+  }
+}
+// responsive
+.user_header .headerTeam,
+.user_header .headerAddContainer {
+  display: none;
+}
+@media (max-width: 960px) {
+  .menuIconContainer {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(220, 225, 231, 1);
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    z-index: 10;
+  }
+  .child_body {
+    margin-top: 0;
+  }
+  .user_header {
+    border-bottom: none;
+    position: static;
+    width: 100%;
+    height: auto;
+    // padding: 15px 0 29px 0;
+  }
+  .user_logo_img,
+  .user_header_icons {
+    display: none;
+  }
+  .teamDetails_header {
+    display: block;
+  }
+  .sidebar_profile,
+  .user_header .headerTeam,
+  .user_header .headerAddContainer {
+    display: flex;
+  }
+  .w-m-100 {
+    width: 100%;
+  }
+}

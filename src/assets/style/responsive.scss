@@ -1,0 +1,21 @@
+@media (min-width: 992px) {
+  .start_btn,
+  .create_btn,
+  .input_box,
+  .email_input .react-tel-input .form-control,
+  .email_input .react-tel-input .form-control:focus {
+    max-width: 311px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading1 {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .input_box {
+    font-size: 12px;
+  }
+}

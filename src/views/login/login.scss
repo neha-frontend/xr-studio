@@ -1,0 +1,26 @@
+.forget_pwd {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.28px;
+  color: #1a96f0;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.forget_pwd:hover {
+  color: #1a96f0;
+}
+
+.create_acc {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  color: #616161;  
+ 
+  .create_link {
+    text-decoration: none;
+    color: #1a96f0;
+  }
+}

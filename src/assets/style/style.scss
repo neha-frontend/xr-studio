@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Oatmeal Pro';
+  src: url('./../font/oatmeanPro/OatmealProTRIAL-Regular.otf') format('opentype');
+}
+
+* {
+  font-family: 'Oatmeal Pro';
+  font-feature-settings: 'salt' on;
+}
+
+.heading1 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.heading2 {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.heading3 {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.footer {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  color: #616161;
+  text-align: center;
+  padding: 0 20px;
+
+  .footer_link {
+    color: #1a96f0;
+    text-decoration: none;
+  }
+}
+
+.start_btn {
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: center;
+  padding: 12px 48px;
+  background: #005cff;
+  border-radius: 40px;
+  // max-width: 311px;
+  width: 35vh;
+  height: auto;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.start_btn:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.create_btn {
+  margin: 16px auto 0;
+  display: flex;
+  justify-content: center;
+  padding: 12px 48px;
+  white-space: nowrap;
+  width: 35vh;
+  background: #ffffff;
+  border: 1px solid #dce1e7;
+  border-radius: 40px;
+  color: #000713;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.create_btn:hover {
+  color: #000713;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.input_box {
+  padding: 12px;
+  padding-right: 40px;
+  width: 35vh;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #dce1e7;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.input_box:focus {
+  outline: #dce1e7;
+}
+
+//formik error
+.error_msg {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: #ff3333;
+}
+
+.teamname_error {
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+}
+
+.email_input .react-tel-input .form-control,
+.email_input .react-tel-input .form-control:focus {
+  padding: 12px 12px 12px 75px;
+  // max-width: 311px;
+  width: 35vh;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #dce1e7;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.email_input .react-tel-input .selected-flag {
+  outline: none;
+  position: relative;
+  width: 60px;
+  height: 100%;
+  padding: 0 0 0 19px;
+  background: white;
+  border-radius: 3px 0 0 3px;
+}
+
+//input-box spinner
+.input_spinner {
+  position: absolute;
+  top: 88px;
+  right: 13px;
+}
+
+.spinner_body.spinner-border {
+  color: #757575;
+  border-width: 2.4px;
+  height: 20px;
+  width: 20px;
+}
+.create_team_spinner {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.rename_team_spinner {
+  position: absolute;
+  top: 33px;
+  right: 15px;
+}
+// password eye icon
+.eye_icon {
+  position: absolute;
+  top: 35px;
+  right: 13px;
+}
+
+.eye_off {
+  position: absolute;
+  top: 45px;
+  right: 13px;
+}
+//loading
+.hidesection {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+//Toaster css
+.Toastify__toast-theme--light {
+  background: #d8ffe6;
+  border: 1px solid #d8ffe6;
+  box-shadow: 0px 12px 24px rgb(0 0 0 / 5%);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #000713;
+
+  .Toastify__progress-bar--error,
+  .Toastify__progress-bar--success {
+    background: transparent;
+  }
+
+  button.Toastify__close-button.Toastify__close-button--light {
+    top: 10px;
+    position: relative;
+    max-width: 14px;
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+//HIDE DROPDOWN CARET
+.dropdown-toggle::after {
+  display: none !important;
+}
+.btn:focus-visible,
+.btn.show:focus-visible {
+  box-shadow: none;
+}
+
+//No Data Found
+.no_data {
+  text-align: center;
+  margin: 10px auto;
+}
+
+//Interactive Css on hover
+.interact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.5s;
+}
+
+.logo_img {
+  max-width: 120px;
+  width: 100%;
+}
+
+.infinite-scroll-component__outerdiv {
+  height: 100%;
+}
+
+.filter_name {
+  font-weight: 400;
+  font-size: 14px;
+  color: #616161;
+  padding: 3px;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}

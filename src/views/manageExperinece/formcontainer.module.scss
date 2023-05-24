@@ -1,0 +1,126 @@
+.main_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+
+  .name_input {
+    position: relative;
+    p {
+      word-wrap: break-word;
+    }
+    .review_span {
+      font-size: 12px;
+      padding: 4px 12px;
+      background-color: #ffbf3a;
+      color: white;
+      font-weight: 600;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+
+    .input_label {
+      font-size: 13px;
+      color: #51566b;
+    }
+
+    .image_circle {
+      width: 90px;
+      height: 90px;
+      border: 1px solid #dce1e7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #005cff;
+
+      .image_preview {
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .exp_tagtext {
+      background: #eeeeee;
+      padding: 8px 10px 8px 12px;
+      border-radius: 47px;
+      color: black;
+      font-weight: 500;
+      font-size: 12px;
+      margin: 10px 10px;
+    }
+
+    .card_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+
+      .card_container {
+        padding: 16px 80px 16px 16px;
+        width: 300px;
+        height: 92px;
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+        border: 1px solid #dce1e7;
+        gap: 10px;
+        justify-content: space-between;
+        .profile_image {
+          width: 60px;
+          height: 60px;
+
+          .profile_thumb {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+
+        .card_content {
+          display: flex;
+          flex-direction: column;
+
+          .tag_name {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            font-feature-settings: 'salt' on;
+            font-style: normal;
+            margin-bottom: 5px;
+          }
+          .tag_userName {
+            color: #51566b;
+            font-size: 13px;
+            font-weight: 400;
+            font-style: normal;
+          }
+        }
+      }
+
+      @media (max-width: 500px) {
+        .card_container {
+          padding: 10px 10px 10px 10px;
+          height: 60px;
+          width: 150px;
+
+          .profile_image {
+            width: 36px;
+            height: 36px;
+          }
+          .card_content {
+            .tag_name {
+              font-size: 13px;
+            }
+            .tag_userName {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

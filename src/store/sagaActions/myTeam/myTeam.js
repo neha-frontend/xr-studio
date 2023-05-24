@@ -1,0 +1,21 @@
+import { createAction } from '@reduxjs/toolkit';
+
+export const getAllTeamAction = createAction('GET_ALL_TEAM_ACTION');
+export const createTeamAction = createAction('CREATE_TEAM_ACTION');
+export const teamNameAvailabilityAction = createAction('TEAM_NAME_AVAILABILITY_ACTION');
+export const getAllTeamMembersAction = createAction('GET_ALL_MEMBERS_ACTION');
+export const deleteTeamAction = createAction('DELETE_TEAM_ACTION');
+export const updateTeamAction = createAction('UPDATE_TEAM_ACTION');
+export const getTeamDetailAction = createAction('GET_TEAM__DETAIL_ACTION');
+export const getTeamMemberAction = createAction('GET_TEAM__MEMBER_ACTION');
+export const updateMemberRoleAction = createAction('UPDATE_MEMBER_ROLE_ACTION');
+export const inviteMemberAction = createAction('INVITE_MEMBER_ACTION');
+export const removeMemberAction = createAction('REMOVE_MEMBER_ACTION');
+export const addToFavouriteAction = createAction('ADD_TO_FAVOURITE_ACTION');
+export const removeFromFavouriteAction = createAction('REMOVE_FROM_FAVOURITE_ACTION');
+export const joinTeamUsingLinkAction = createAction('JOIN_TEAM_USING_LINK_ACTION');
+export const joinTeamByEmailAction = createAction('JOIN_TEAM_BY_EMAIL_ACTION');
+export const setJoinByLinkRoleAction = createAction('SET_JOIN_BY_LINK_ROLE_ACTION');
+export const getuserRoleAction = createAction('GET_USER_ACTION');
+export const transferOwnershipAction = createAction('TRANSFER_OWNERSHIP_ACTION');
+export const getTeamCollaboratorAction = createAction('GET_TEAM_COLLABORATOR_ACTION');

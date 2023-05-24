@@ -1,0 +1,109 @@
+//SETTING ACCORDION SCSS
+
+.accordion_head {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000713;
+}
+
+.sub_head {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9e9e9e;
+}
+@media(max-width:768px){
+  .sub_head{
+    margin-bottom: 20px;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #424242;
+  padding: 0 0 20px 0;
+}
+
+.plan_body {
+  display: flex;
+  margin-top: 30px;
+  gap:20px;
+
+  .plan {
+    max-width: 200px;
+    width: 100%;
+    height: 48px;
+    background: #005cff;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    padding: 12px;
+    // margin-right: 20px;
+  }
+
+  .cancel_plan {
+    max-width: 200px;
+    width: 100%;
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid #ff3333;
+    border-radius: 40px;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #ff3333;
+  }
+  @media(max-width:768px){
+    .plan,.cancel_plan{
+      max-width: 100%;
+    }
+  }
+}
+
+.biling_btn {
+  max-width: 200px;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #005cff;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #005cff;
+  padding: 12px;
+  position: absolute;
+  bottom: 5px;
+}
+
+//SETTING SCSS
+.setting_body {
+  padding: 40px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.arrow_icon {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.thumb_arrow {
+  bottom: 5px;
+}
+@media(max-width:768px){
+  .plan_body{
+    flex-direction: column;
+  }
+  .biling_btn{
+    position: static;
+    max-width: 100%;
+  }
+  .arrow_icon{
+    padding-right: 0;
+  }
+}

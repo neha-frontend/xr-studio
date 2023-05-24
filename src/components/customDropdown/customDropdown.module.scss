@@ -1,0 +1,123 @@
+//DropDown Scss
+.edit_toggle,
+.edit_dropdown .btn.show,
+.edit_toggle:active,
+.edit_toggle:hover,
+.edit_toggle:active {
+  background-color: white !important;
+  color: black !important;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.28px;
+  font-feature-settings: 'salt' on;
+  color: #616161;
+  padding: 0;
+}
+
+.dot_img {
+  max-width: 25px;
+}
+
+.dot_dd {
+  font-size: 25px;
+}
+
+.filter_item {
+  display: flex;
+}
+
+.dd_check {
+  width: 30px;
+  padding-right: 14px;
+}
+
+.filter_item,
+.dropdown-item.active,
+.dropdown-item:active {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.28px;
+  font-feature-settings: 'salt' on;
+  color: #424242;
+}
+
+.selected_item {
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.28px;
+  font-feature-settings: 'salt' on;
+  color: #424242;
+}
+
+.filter_item:active {
+  background-color: #e9ecef;
+  color: black;
+}
+
+//simple dropdown
+.simpledd_item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.28px;
+  font-feature-settings: 'salt' on;
+  color: #424242;
+}
+
+.simpledd_item:active {
+  background-color: #e9ecef;
+  color: black;
+}
+
+//MULTISECTION DROPDOWN
+.multisectiondd_header {
+  margin-left: 30px;
+}
+.multisectiondd button {
+  background: transparent;
+  color: black;
+  border: none;
+}
+
+@media (max-width: 475px) {
+  .edit_toggle {
+    padding-left: 0.17rem;
+    padding-right: 0.17rem;
+  }
+}
+
+//CHAT MENU
+.chat_toggle {
+  max-width: 15px;
+}
+
+.chat_menu {
+  background: #fafafa;
+  box-shadow: 0px 1px 12px rgba(87, 87, 87, 0.25);
+  border-radius: 12px;
+  width: 190px;
+  height: 190px;
+
+  .chat_item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+    color: #000713;
+    border-bottom: 1px solid #dce1e7;
+    padding: 9px 16px;
+    background-color: #fafafa;
+  }
+}
+
+.chat_menu .chat_item:last-child {
+  border-bottom: unset;
+}

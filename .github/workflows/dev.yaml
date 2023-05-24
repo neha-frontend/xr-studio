@@ -1,0 +1,88 @@
+name: s3-deployment
+# Run workflow only on push to dev branch
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  # To build the project
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          
+      - name: adding .env file
+        run: echo -en "
+              REACT_APP_ENV_STATUS='development'\n
+              SKIP_PREFLIGHT_CHECK=true\n
+              REACT_APP_END_POINT_URL='https://dev-identity.nodexr.dev/api/v1/'\n
+              REACT_APP_STUDIO_BASE_URL='https://dev-studio-team.nodexr.dev/api/v1/'\n
+              REACT_APP_AWS_ACCESS_KEY_ID='${{ secrets.REACT_APP_AWS_ACCESS_KEY_ID }}'\n
+              REACT_APP_AWS_SECRET_ACCESS_KEY='${{ secrets.REACT_APP_AWS_SECRET_ACCESS_KEY }}'\n
+              REACT_APP_AWS_REGION='us-east-1'\n
+              REACT_APP_AWS_BUCKET_NAME='solulab-xr-dev' \n
+              REACT_APP_S3_BASE_URL='https://solulab-xr-dev.s3.amazonaws.com/media' \n
+              REACT_APP_IMAGE_KIT_BASE_URL='${{ secrets.REACT_APP_IMAGE_KIT_BASE_URL }}' \n
+              REACT_APP_BRANCH_IO_KEY='${{ secrets.REACT_APP_BRANCH_IO_KEY }}'  "> .env.development
+             
+      - name: adding prod .env file
+        run: echo -en "
+             REACT_APP_ENV_STATUS='production'\n
+             SKIP_PREFLIGHT_CHECK=true\n
+             REACT_APP_END_POINT_URL='https://dev-identity.nodexr.dev/api/v1/'\n
+             REACT_APP_STUDIO_BASE_URL='https://dev-studio-team.nodexr.dev/api/v1/'\n
+             REACT_APP_AWS_ACCESS_KEY_ID='${{ secrets.REACT_APP_AWS_ACCESS_KEY_ID }}'\n
+             REACT_APP_AWS_SECRET_ACCESS_KEY='${{ secrets.REACT_APP_AWS_SECRET_ACCESS_KEY }}'\n
+             REACT_APP_AWS_REGION='us-east-1'\n
+             REACT_APP_AWS_BUCKET_NAME='solulab-xr-dev' \n
+             REACT_APP_S3_BASE_URL='https://solulab-xr-dev.s3.amazonaws.com/media' \n
+             REACT_APP_IMAGE_KIT_BASE_URL='${{ secrets.REACT_APP_IMAGE_KIT_BASE_URL }}' \n
+             REACT_APP_BRANCH_IO_KEY='${{ secrets.REACT_APP_BRANCH_IO_KEY }}'  "> .env.production             
+
+      - name: show env
+        run: cat .env.development    
+
+      - name: show prod env
+        run: cat .env.production    
+
+      - name: Installing Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - name: Installing dependencies
+        run: npm install        
+      - name: Building project
+        run: npm run build:development
+        
+      - name: Deploy to S3 bucket
+        run: aws s3 sync ./build  s3://xr-studio-react #--delete
+
+      - name: Invalidate cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/*"  
+
+  notify:
+    name: Send mail
+    runs-on: ubuntu-latest
+    needs: [build]
+    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    steps:
+    - name: Send email
+      uses: dawidd6/action-send-mail@v2
+      with:
+        # mail server settings
+        server_address: smtp.gmail.com
+        server_port: 465
+        # user credentials
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: Pipline of ${{ github.repository }} is Failed
+        body: "${{ github.workflow }} has been Failed \nLink to Pipeline https://github.com/${{ github.repository }}/actions"
+        to: shivangani@solulab.com,parth.gaggar@solulab.co
+        from: github-action  
+        

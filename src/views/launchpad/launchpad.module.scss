@@ -1,0 +1,161 @@
+.launchpad_body {
+  position: relative;
+  .back_arrow {
+    display: none;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 36.24px;
+    color: #000713;
+    letter-spacing: -0.28px; 
+  }
+
+  .table_responsive {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+
+    .launchpad_table {
+      background: #faf9fd;
+
+      .table_head {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #424242;
+        padding: 15px 10px;
+        border-bottom: none;
+        white-space: nowrap;
+
+        .arrow_img {
+          display: inline-block;
+          width: 20px;
+        }
+      }
+    }
+
+    .table_body {
+      color: #424242;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      font-style: normal;
+      padding: 15px 10px;
+      cursor: pointer;
+      white-space: nowrap;
+
+      .time_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .status {
+        border-radius: 4px;
+        color: white;
+        padding: 2px 12px;
+        font-size: 12px;
+      }
+      .review {
+        background-color: #ffbf3a;
+        border: 1px solid #ffbf3a;
+      }
+
+      .declined {
+        background-color: #ff3333;
+      }
+
+      .active {
+        background-color: #005cff;
+      }
+
+      .approved {
+        background-color: #00c247;
+      }
+      .inactive {
+        background-color: #757575;
+      }
+
+      .draft {
+        background-color: #bdbdbd;
+      }
+      span h6 {
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      .arrow {
+        width: 6px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .launchpad_body {
+    .title {
+      position: absolute;
+      top: -100px;
+      right: 50%;
+    }
+
+    .back_arrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80px;
+      height: 22px;
+
+      .back_arrow img {
+        width: 6px;
+        height: 12px;
+      }
+
+      .arrow_title {
+        font-size: 13px;
+        margin: 0;
+      }
+    }
+
+    .table_responsive {
+      .launchpad_table {
+        .table_head {
+          font-size: 13px;
+          line-height: 19px;
+        }
+      }
+
+      .table_body {
+        font-size: 13px;
+        line-height: 19px;
+
+        span h6 {
+          font-size: 13px;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .launchpad_body {
+    .title {
+      position: absolute;
+      top: -100px;
+      right: 30%;
+    }
+    .table_responsive {
+      .table_body {
+        .arrow {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

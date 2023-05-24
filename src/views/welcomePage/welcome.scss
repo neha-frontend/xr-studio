@@ -1,0 +1,26 @@
+.body.welcome_body {
+  margin-top: 66px;
+  min-height: calc(100vh - 116px);
+  .welcome_title {
+    text-align: center;
+    letter-spacing: -0.28px;
+    color: #000713;
+  }
+
+  .welcome_desc {
+    margin: 24px auto;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.28px;
+    color: #757575;
+    text-align: center;
+    width: 45vh;
+  }
+
+  @media (min-width: 992px) {
+    .welcome_desc {
+      max-width: 523px;
+      width: 100%;
+    }
+  }
+}

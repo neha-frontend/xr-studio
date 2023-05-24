@@ -1,0 +1,14 @@
+.profileImage {
+  border-radius: 50%;
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(50px, 4vw, 60px);
+  font-weight: bold;
+  color: #333;
+}
+
+.initials {
+  text-transform: uppercase;
+}

@@ -1,0 +1,74 @@
+.modal_body {
+  display: flex;
+  flex-direction: column;
+  max-width: 311px;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  margin: 0 auto;
+
+  .modal_title {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #000713;
+    padding-top: 8px;
+  }
+
+  .modal_desc {
+    text-align: center;
+    color: #616161;
+    padding-top: 12px;
+  }
+
+  .email_input {
+    display: flex;
+    margin-top: 45px;
+    .otp_input,
+    .otp_input:focus-visible,
+    .otp_input:active,
+    .otp_input:focus {
+      width: 35px !important;
+      border: none;
+      border-bottom: 1px solid #bdbdbd;
+      margin-left: 15px;
+      outline: none;
+    }
+  }
+
+  .resend_otp {
+    text-align: center;
+    margin-top: 32px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .send_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 48px;
+    max-width: 311px;
+    width: 100%;
+    height: auto;
+    background: #005cff;
+    border-radius: 40px;
+    margin: 40px 10px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.close_modal {
+  text-align: end;
+  margin: 22px 22px 0 0;
+
+  .close_icon {
+    max-width: 30px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+}
